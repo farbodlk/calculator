@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo img {
+  margin: 11.5rem 0 6.5rem 0rem;
+  width: 65px;
+  height: 40px;
+  font-size: 56px;
+}
+
+.main {
+  background-color: white;
+  width: 50%;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.label-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+
+.main .right .label-wrapper label {
+  color: #9EBBBD;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.inp-text {
+  background-color: #f4fafa;
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: #00494d;
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.5rem 2.4rem;
+}
+
+::placeholder {
+  color: rgb(0 71 75 / 35%);
+}
+
+.inp-text:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+}
+
+.inp-wrapper {
+  position: relative;
+}
+
+.main .right .inp-wrapper img {
+  position: absolute;
+  left: 2.4rem;
+  top: 1.5rem;
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 1.2rem;
+}
+
+.label-wrapper .error-msg {
+  color: indianred;
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.label-wrapper .show-error-msg {
+
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes show-err {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+.btn-wrapper .btn {
+  width: 46%;
+  text-align: center;
+  background-color: #00494d;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
+  transition: all 0.5s ease;
+}
+
+.btn-wrapper .btn:hover {
+  background-color: #9fe8df;
+}
+
+.btn-wrapper .btn-active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.btn-wrapper .inp-text {
+  width: 46%;
+}
+
+.left {
+  background-color: #00494d;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 2.2rem;
+}
+
+.line-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.4rem 0 2.4rem 0;
+}
+
+.line-left .title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.desc {
+  color: #7f9c9f;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.value {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.main .left .btn {
+  width: 100%;
+  background-color: #26c0ab;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00494d;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  margin-top: 3.4rem;
+
+  transition: all 0.5s ease;
+}
+
+.main .left .btn:hover {
+  background-color: #9fe8df;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+  }
+
+  .logo img {
+    margin: 7rem 0 5.3rem 0rem;
+    width: 85px;
+    height: 60px;
+    font-size: 56px;
+  }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1448px) {}
+
+@media screen and (min-width: 1449px) {
+  .main {
+    width: 60%;
+
+    flex-direction: row;
+    border-radius: 2.5rem;
+
+    align-items: stretch;
+    padding: 3.4rem;
+    gap: 1.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05),
+      0px 20px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .main .right {
+    width: 105%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+
+  .main .right .label-wrapper {
+    padding: 1rem 0;
+  }
+
+  .main .right .btn-wrapper .btn {
+    width: 30.5%;
+    justify-content: space-between;
+  }
+
+  .main .right .btn-wrapper .inp-text {
+    width: 30.5%;
+  }
+
+  .left {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+
+  .line-wrapper .line-left {
+    margin: 0.5rem 0 2.4rem 0;
+  }
+
+  .line-left .value {
+    font-size: 4.6rem;
+  }
+}
